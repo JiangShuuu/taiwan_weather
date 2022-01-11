@@ -403,7 +403,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scor>
+<style lang="scss" scoped>
+@import "../assets/scss/All.scss";
 .content {
   background-color: #222;
   .svg_icon {
@@ -415,7 +416,7 @@ export default {
         transition: 0.5s;
         cursor: pointer;
         &:hover {
-          fill: #b99362;
+          fill: $color_gold;
           transform: translate(-5px, -5px);
         }
       }
