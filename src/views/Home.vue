@@ -30,11 +30,18 @@ export default {
   background-color: $background_blue;
   height: 100vh;
   .container {
-    width: 70%;
-    display: flex;
+    width: 100%;
+    @include flexCenter;
+    @include pad {
+      width: 90%;
+    }
+    @include web {
+      width: 90%;
+    }
     .main_svg {
       @include web {
         display: block;
+        width: 40%;
       }
     }
     .main_content {

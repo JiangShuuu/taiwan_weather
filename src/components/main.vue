@@ -45,27 +45,35 @@
           度之間，降雨機率約 10%。
         </p>
       </div>
+      <div class="footer d-none">
+        <p>Powered by John Lu</p>
+      </div>
     </div>
     <div class="main_detail">
-      <div class="card">
-        <div class="card_title">日出</div>
-        <div class="card_detail">上午 6:42</div>
+      <div class="card_wrapper">
+        <div class="card">
+          <div class="card_title">日出</div>
+          <div class="card_detail">上午 6:42</div>
+        </div>
+        <div class="card">
+          <div class="card_title">日落</div>
+          <div class="card_detail">下午 6:42</div>
+        </div>
+        <div class="card">
+          <div class="card_title">降雨機率</div>
+          <div class="card_detail">70%</div>
+        </div>
+        <div class="card">
+          <div class="card_title">溫度</div>
+          <div class="card_detail">80%</div>
+        </div>
+        <div class="card">
+          <div class="card_title">風</div>
+          <div class="card_detail">東北 6 公尺 / 秒</div>
+        </div>
       </div>
-      <div class="card">
-        <div class="card_title">日落</div>
-        <div class="card_detail">下午 6:42</div>
-      </div>
-      <div class="card">
-        <div class="card_title">降雨機率</div>
-        <div class="card_detail">70%</div>
-      </div>
-      <div class="card">
-        <div class="card_title">溫度</div>
-        <div class="card_detail">80%</div>
-      </div>
-      <div class="card">
-        <div class="card_title">風</div>
-        <div class="card_detail">東北 6 公尺 / 秒</div>
+      <div class="footer">
+        <p>Powered by John Lu</p>
       </div>
     </div>
   </div>
@@ -83,6 +91,9 @@
   }
   &_container {
     width: 80%;
+    @include pad {
+      margin: 0 3rem 0 1rem;
+    }
     .box_1 {
       .current_summary {
         font-size: 10px;
@@ -98,7 +109,7 @@
       justify-content: space-between;
       width: 100%;
       padding: 0.25rem 0.75rem;
-      border-bottom: 1px solid white;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
       .date {
         display: flex;
         align-items: flex-end;
@@ -119,14 +130,14 @@
     .box_3 {
       font-size: 10px;
       padding: 0.25rem 0.75rem;
-      border-bottom: 1px solid white;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
       .card {
         width: 10%;
       }
     }
     .box_4 {
       padding: 0.25rem 0.75rem;
-      border-bottom: 1px solid white;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
       .card {
         @include flexCenter;
         justify-content: space-between;
@@ -142,7 +153,7 @@
     .explain_1 {
       padding: 0.25rem 0.75rem;
       text-align: start;
-      border-bottom: 1px solid white;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
       @include pad {
         display: none;
       }
@@ -153,7 +164,15 @@
       }
       padding: 0.25rem 0.75rem;
       text-align: start;
-      border-bottom: 1px solid white;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    }
+    .footer {
+      font-size: 10px;
+      padding-top: 0.5rem;
+      opacity: 0.5;
+      @include pad {
+        display: block;
+      }
     }
   }
   &_detail {
@@ -161,7 +180,15 @@
     justify-content: flex-start;
     flex-direction: column;
     width: 80%;
-    border: 1px solid;
+    @include pad {
+      width: 40%;
+    }
+    .card_wrapper {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+      @include pad {
+        border-bottom: none;
+      }
+    }
     padding: 0.25rem 0.75rem;
     .card {
       text-align: start;
@@ -171,6 +198,14 @@
       }
       &_detail {
         font-size: 24px;
+      }
+    }
+    .footer {
+      font-size: 10px;
+      padding-top: 0.5rem;
+      opacity: 0.5;
+      @include pad {
+        display: none;
       }
     }
   }

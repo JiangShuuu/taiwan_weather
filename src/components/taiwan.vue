@@ -406,10 +406,11 @@ export default {
 <style lang="scss" scoped>
 @import "../assets/scss/All.scss";
 .content {
-  background-color: #222;
+  height: 100%;
+  @include flexCenter;
   .svg_icon {
     svg {
-      height: 100vh;
+      height: 60vh;
       path {
         stroke: white;
         fill: transparent;
